@@ -2,12 +2,13 @@
 	"manifest_version": 2,
 
 	"name": "youtubenosuggest",
-  	"description": "An extension that blocks Youtube's suggested videos",
-  	"version": "1.0",
-  "content_scripts": [
-    {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["blockSuggestions.js"]
-    }
+  "description": "An extension that blocks Youtube's suggested videos",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "*://*.youtube.com/*", "tabs", "webNavigation"
   ]
 }
