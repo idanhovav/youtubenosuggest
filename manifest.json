@@ -4,9 +4,13 @@
 	"name": "SchoolSafe Youtube",
   "description": "Block potentially inappropriate content while using Youtube for educational purposes.",
   "version": "1.0",
-  "background": {
-    "scripts": ["background.js"]
-  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["blockSuggestions.js"]
+    }
+  ],
+
 
   "permissions": [
     "*://*.youtube.com/*", "tabs", "webNavigation"
