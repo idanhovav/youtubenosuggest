@@ -6,14 +6,11 @@ var deleteThisHereNode = (node) => {
 }
 
 try {
-		var sidebar = document.getElementById("watch7-sidebar");
-		deleteThisHereNode(sidebar);
+		var relatedSidebar = document.getElementById("related");
+		deleteThisHereNode(relatedSidebar);
 		var postVideo = document.getElementsByClassName("ytp-endscreen-content");
-		var i;
-		for (i = 0; i < postVideo.length; i++) {
-			deleteThisHereNode(postVideo[i]);
-		}
 } catch (err) {
+	console.log('blockSugesstions error');
 	console.log(err.message);
 }
 console.log("now be productive")
