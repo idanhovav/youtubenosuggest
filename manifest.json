@@ -16,6 +16,6 @@
 
 
   "permissions": [
-    "*://*.youtube.com/*", "tabs", "webNavigation"
+    "*://*.youtube.com/*"
   ]
 }
