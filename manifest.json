@@ -1,9 +1,12 @@
 {
 	"manifest_version": 2,
-
-	"name": "SchoolSafe Youtube",
-  "description": "Block potentially inappropriate content while using Youtube for educational purposes.",
   "version": "1.0",
+	"name": "SchoolSafe Youtube: ",
+  "short_name": "SchoolSafe Youtube",
+  "description": "Automatically hide suggested videos and comments when showing YouTube videos in class. Prevent distractions & inappropriate content from interfering with your lesson plans & presentations.",
+  "icons": {
+      "128": "icon128.png"
+    },
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
