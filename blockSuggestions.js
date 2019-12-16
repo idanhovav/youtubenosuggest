@@ -1,16 +1,26 @@
-// Written by Idan Hovav please don't be mean or bad.
-var deleteThisHereNode = (node) => {
+// Written by Idan Hovav. Updated on 12/15/19.
+
+idsToRemove = ['related', 'comments'];
+
+var removeNode = node => {
 	if (node && node.parentNode) {
 		node.parentNode.removeChild(node);
 	}
 }
 
-try {
-		var relatedSidebar = document.getElementById("related");
-		deleteThisHereNode(relatedSidebar);
-		var postVideo = document.getElementsByClassName("ytp-endscreen-content");
-} catch (err) {
-	console.log('blockSugesstions error');
-	console.log(err.message);
+var getNode = id => {
+	return document.getElementById(id);
 }
-console.log("now be productive")
+
+var removeNodeById = id => {
+	try {
+		var node = getNode(id);
+		removeNode(node);	
+	}
+	catch (err) {
+		console.log(err.message);
+	}
+}
+
+idsToRemove.forEach(id => removeNodeById(id));
+console.log('done');
