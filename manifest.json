@@ -11,6 +11,6 @@
     "scripts": ["background.js"]
   },
   "permissions": [
-    "*://*.youtube.com/*"
+    "*://*.youtube.com/*", "tabs", "webNavigation"
   ]
 }
