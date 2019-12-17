@@ -1,16 +1,26 @@
 {
-	"manifest_version": 2,
+  "manifest_version": 2,
   "version": "1.0",
-	"name": "SchoolSafe Youtube: ",
+  "name": "SchoolSafe Youtube: ",
   "short_name": "SchoolSafe Youtube",
   "description": "Automatically hide suggested videos and comments when showing YouTube videos in class. Prevent distractions & inappropriate content from interfering with your lesson plans & presentations.",
-  "icons": {
+  "icons":
+  {
       "128": "icon128.png"
-    },
-  "background": {
+  },
+  "background":
+  {
     "scripts": ["background.js"]
   },
-  "permissions": [
+  "content_scripts":
+  [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["blockSuggestions.js"]
+    }
+  ],
+  "permissions":
+  [
     "*://*.youtube.com/*", "tabs", "webNavigation"
   ]
 }
