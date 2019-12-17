@@ -3,7 +3,7 @@
   "version": "1.0",
   "name": "SchoolSafe Youtube: ",
   "short_name": "SchoolSafe Youtube",
-  "description": "Automatically hide suggested videos and comments when showing YouTube videos in class. Prevent distractions & inappropriate content from interfering with your lesson plans & presentations.",
+  "description": "Automatically hide suggested videos & comments when using Youtube. Prevent distractions from interfering with your lesson plans.",
   "icons":
   {
       "128": "icon128.png"
