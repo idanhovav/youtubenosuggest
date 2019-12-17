@@ -7,14 +7,9 @@
   "icons": {
       "128": "icon128.png"
     },
-  "content_scripts": [
-    {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["blockSuggestions.js"]
-    }
-  ],
-
-
+  "background": {
+    "scripts": ["background.js"]
+  },
   "permissions": [
     "*://*.youtube.com/*"
   ]
